@@ -1,0 +1,21 @@
+* {
+    font-family: Arial, serif;
+    text-align: center;
+}
+
+div.form{
+    display: inline-block;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+div.links{
+    display: inline-block;
+    background-color: antiquewhite;
+    padding: 0 10px;
+    border: 2px black solid;
+}
+
+a.link{
+    text-decoration: none;
+}

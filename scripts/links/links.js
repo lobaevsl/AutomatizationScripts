@@ -12,9 +12,9 @@ function split() {
         for (let i = 0; i < links.length; i++) {
             let elem = document.createElement('a');
             elem.href = links[i][0];
-            elem.target = '_blank';
-            elem.textContent = 'Ссылка ' + (i + 1);
-            elem.appendChild(document.createElement('br'));
+            let text = document.createElement('p');
+            text.textContent = 'Ссылка ' + (i + 1);
+            elem.appendChild(text);
 
             output.appendChild(elem);
         }
