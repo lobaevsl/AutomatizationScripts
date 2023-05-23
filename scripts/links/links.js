@@ -1,4 +1,4 @@
-const regExp = new RegExp('([^, ]+)', 'g');
+const regExp = new RegExp('(https?:\/\/[^, ]+)', 'g');
 
 function split() {
     const input = document.getElementById('links');
@@ -6,8 +6,8 @@ function split() {
 
     output.innerHTML = '';
     const links = [...input.value.matchAll(regExp)];
-    if (links.length === 1) {
-        output.innerText = 'Ответ';
+    if (links.length === 0) {
+        output.innerText = 'Ссылки не найдены';
     } else {
         for (let i = 0; i < links.length; i++) {
             let elem = document.createElement('a');
