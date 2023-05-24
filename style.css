@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+div.form, div.links{
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
 div.form{
     display: inline-block;
     background-color: lightgray;
@@ -13,7 +18,6 @@ div.links{
     display: inline-block;
     background-color: antiquewhite;
     padding: 0 10px;
-    border: 2px black solid;
 }
 
 a.link{
