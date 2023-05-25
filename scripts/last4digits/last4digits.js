@@ -23,6 +23,7 @@ function check() {
         outputNums = outputNums.slice(0, -1);
         output.innerHTML = outputNums;
     }
+    input.value = '';
 }
 
 function copyToClipboard(){
