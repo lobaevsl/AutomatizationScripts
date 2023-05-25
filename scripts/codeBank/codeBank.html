@@ -20,15 +20,18 @@
 <br>
 <div class="form">
     <label>Проверенные:</label><br>
-    <button onclick="copyToClipboard('outLeft')" style="margin-top: 5px">Копировать в буфер код</button>
-    <button onclick="copyToClipboard('outRight')" style="margin-top: 5px">Копировать в буфер банк</button><br>
+
     <table>
         <tr>
             <td>
+                <button onclick="copyToClipboard('outLeft')" style="margin: 5px">Копировать в буфер код</button>
+                <br>
                 <label for="outLeft">Коды</label><br>
                 <textarea class="out" id="outLeft" readonly rows="1"></textarea>
             </td>
             <td>
+                <button onclick="copyToClipboard('outRight')" style="margin: 5px">Копировать в буфер банк</button>
+                <br>
                 <label for="outRight">Банки</label><br>
                 <textarea class="out" id="outRight" readonly rows="1"></textarea>
             </td>
