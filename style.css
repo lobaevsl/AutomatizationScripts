@@ -6,6 +6,7 @@
 div.form, div.links{
     border: 1px black solid;
     border-radius: 10px;
+    margin: 5px;
 }
 
 div.form{
@@ -17,7 +18,7 @@ div.form{
 div.links{
     display: inline-block;
     background-color: antiquewhite;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 a{
@@ -31,4 +32,12 @@ a.link{
 a.link:hover{
     text-decoration: underline;
     color: #212175;
+}
+
+textarea{
+    resize: none;
+}
+
+textarea.out{
+    background-color: #eaeaea;
 }
