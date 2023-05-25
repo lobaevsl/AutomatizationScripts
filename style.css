@@ -1,43 +1,57 @@
-* {
+body {
     font-family: Arial, serif;
     text-align: center;
 }
 
-div.form, div.links{
+div.form,
+div.links {
     border: 1px black solid;
     border-radius: 10px;
     margin: 5px;
 }
 
-div.form{
+div.form {
     display: inline-block;
     background-color: lightgray;
     padding: 10px;
 }
 
-div.links{
+div.links {
     display: inline-block;
     background-color: antiquewhite;
     padding: 0 20px;
 }
 
-a{
+div.comment {
+    border: 1px black dotted;
+    border-radius: 30px;
+    margin: 5px;
+    display: inline-block;
+    background-color: aliceblue;
+    padding: 10px 30px 10px 10px;
+}
+
+a {
     color: #285988;
 }
 
-a.link{
+a.link {
     text-decoration: none;
 }
 
-a.link:hover{
+a.link:hover {
     text-decoration: underline;
     color: #212175;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
-textarea.out{
+textarea.out {
     background-color: #eaeaea;
+}
+
+ul.comment {
+    text-align: left;
 }
