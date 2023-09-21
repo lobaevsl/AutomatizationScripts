@@ -6,6 +6,7 @@
     const buttonDownload = D.getElementById('download');
     const textOut = D.getElementById('textOut');
     const fileName = D.getElementById('fileName');
+    const saveName = D.getElementById('saveName');
     let file;
     let matrix;
     let fileText;
@@ -147,8 +148,10 @@
     function download(){
         let blob = new Blob([outString], {type: 'text/csv'});
         let link = document.createElement('a');
+        let name = saveName.value;
+        if (name === '') name = 'calculated';
         link.setAttribute('href', URL.createObjectURL(blob));
-        link.setAttribute('download', 'calculated.csv');
+        link.setAttribute('download', name + '.csv');
         link.click();
         link.remove();
     }
