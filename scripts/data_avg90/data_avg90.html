@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обработка сырых данных с графаны</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <div>
+    <label class="input-file">
+      <input type="file" accept="text/csv"/>
+      <span>Выберите файл</span>
+    </label>
+    <br>
+    <label id="fileName">
+    </label>
+  </div>
+  <div>
+    <button disabled id="front">Front</button>
+    <button disabled id="middle">Middle (*1000)</button>
+  </div>
+  <div>
+    <label>
+      Предпросмотр
+      <textarea id="textOut" readonly rows="20" style="width: 100%"></textarea>
+    </label>
+  </div>
+  <div>
+    <label>
+      <button disabled id="download">Скачать</button>
+    </label>
+  </div>
+  <script src="data_avg90.js"></script>
+</body>
+</html>
