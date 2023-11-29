@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Pacing</title>
+    <style>
+        body {
+            font-family: Arial, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Стили для ячеек ввода */
+        input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100px
+            /* Другие стили, которые вы хотите добавить */
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .transaction-name-column{
+            width: 200px;
+        }
+
+        table{
+            border: 1px solid #555;
+            margin-bottom: 10px;
+        }
+
+        th{
+            border: 1px solid #ccc;
+            margin: 5px;
+            padding: 5px;
+            width: 100px;
+        }
+
+        div{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <h2>Интерактивный расчет pacing</h2>
+    <table id="transactions-table">
+        <tr id="line-0">
+            <th>Удалить строку</th>
+            <th>Основной</th>
+            <th class="transaction-name-column">Транзакция</th>
+            <th>Транзакции в транзакции</th>
+            <th>Requests<br>Per Second</th>
+            <th>Requests<br>Per Minute</th>
+            <th>Requests<br>Per Hour</th>
+            <th>VUsers<br>(Threads)</th>
+            <th>Pacing</th>
+            <th>Шанс для IF</th>
+            <th>Количество циклов</th>
+            <th>Сильное округление (до 25%)</th>
+        </tr>
+    </table>
+    <button onclick="createTransaction(transactions.length + 1)">Добавить строку</button>
+</div>
+<script src="calculate_pacing.js"></script>
+</body>
+</html>

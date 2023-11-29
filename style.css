@@ -1,6 +1,13 @@
 body {
     font-family: Arial, serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #fd746c, #ff9068);
 }
 
 div{
@@ -22,7 +29,7 @@ div.form {
 
 div.links {
     display: inline-block;
-    background-color: antiquewhite;
+    background-color: #ffe9dd;
     padding: 0 20px;
 }
 
@@ -36,7 +43,7 @@ div.comment {
 }
 
 a {
-    color: #285988;
+    color: #361856;
 }
 
 a.link {
@@ -45,7 +52,7 @@ a.link {
 
 a.link:hover {
     text-decoration: underline;
-    color: #212175;
+    color: #8d0d47;
 }
 
 textarea {
@@ -109,4 +116,9 @@ ul.comment {
 /* Disabled */
 .input-file input[type=file]:disabled + span {
     background-color: #eee;
+}
+
+.content {
+    text-align: center;
+    color: #fff; /* Цвет текста для контента */
 }
