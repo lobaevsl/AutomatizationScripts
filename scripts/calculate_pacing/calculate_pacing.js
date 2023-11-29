@@ -44,6 +44,10 @@ class Transaction {
             onDeleteRow(this)
             delete this
         })
+
+        this.transaction_count.addEventListener('input', () =>{
+            this.onTransactionsCountChanged()
+        })
     }
 
     setAllIds(id){
@@ -165,6 +169,30 @@ class Transaction {
             this.threads_count.value = currentThreads
         }
         else if (currentStr.length === 0) this.threads_count.value = 0
+
+        recalculateAll()
+    }
+
+    onTransactionsCountChanged(){
+        let currentCount = this.transaction_count.value
+
+        if (currentCount < 0) {
+            currentCount *= -1
+            this.transaction_count.value = currentCount
+        }
+
+        let currentStr = currentCount.toString()
+
+        if (currentStr === '-0') {
+            this.transaction_count.value = 0
+        }
+
+        if (currentStr.length > 1 && (currentStr[0] === '0' && currentStr[1] !== '.')) {
+            currentStr = currentStr.substring(1)
+            currentCount = parseFloat(currentStr)
+            this.transaction_count.value = currentCount
+        }
+        else if (currentStr.length === 0) this.transaction_count.value = 0
 
         recalculateAll()
     }
